@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 配置student对象
+	<bean id="stu" class="com.hzit.entity.Student">
+			<property name="id" value="1"></property>
+		
+		<property name="name">
+			<value><![CDATA[<zhangsan>]]></value>
+		</property>
+		<property name="name" value=""></property>
+		
+		<property name="age" value="22"></property>
+	</bean>
+	 -->
+	<!-- 
+	<bean id="stu2" class="com.hzit.entity.Student">
+		<property name="id" value="2"></property>
+		<property name="name" value="李四"></property>
+		<property name="age" value="23"></property>
+	</bean>
+	 -->
+	 
+	 <!-- 通过有参构造函数创建对象 
+	 <bean id="stu3" class="com.hzit.entity.Student">
+	 	<constructor-arg value="小明" name="name"></constructor-arg>
+	 	<constructor-arg value="3" name="id"></constructor-arg>
+	 	<constructor-arg value="22" name="age"></constructor-arg>
+	 </bean>
+	 -->
+	 
+	 <bean id="classes" class="com.hzit.entity.Classes">
+	 	<property name="id" value="1"></property>
+	 	<property name="name" value="Java班"></property>
+	 	<property name="students">
+	 		<list>
+	 			<ref bean="stu"/>
+	 			<ref bean="stu2"/>
+	 		</list>
+	 	</property>
+	 </bean>
+	 
+	 <bean id="stu" class="com.hzit.entity.Student">
+	 	<property name="id" value="1"></property>
+	 	<property name="name">
+			<value><![CDATA[<张三>]]></value>
+		</property>
+		<property name="age" value="23"></property>
+	 </bean>
+	 
+	 <bean id="stu2" class="com.hzit.entity.Student">
+	 	<property name="id" value="2"></property>
+	 	<property name="name" value="李四"></property>
+		<property name="age" value="23"></property>
+	 </bean>
+	 
+</beans>
